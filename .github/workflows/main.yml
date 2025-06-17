@@ -8,7 +8,7 @@ jobs:
       -  name: Instalação do ffmepeg
          run: |
            sudo apt update --yes
-           sudo apt install ffpeg --yes
+           sudo apt install ffmpeg --yes
       -  name: Executar FFMPEG
          run: |
            ffmpeg --help
