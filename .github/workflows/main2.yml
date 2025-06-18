@@ -1,0 +1,11 @@
+name: Deploy Fake
+on:
+    repository_dispatch:
+        types:
+            -   deploy-remoto
+jobs:
+    deploy-kubernetes:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: DEploy no ambiente
+                run: echo "Executando o deploy no ambiente ${{ github.event.client_payload.ambiente }}
