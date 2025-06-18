@@ -13,5 +13,7 @@ jobs:
                 run: echo "Publicação da release final"
     CD:
         needs: [CI]
-        uses: fsv-aula/repo-reaproveita/.github/workflows/cd.yml@main
-        secrets: inherit
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Testando
+                run: echo "testando tudo" 
