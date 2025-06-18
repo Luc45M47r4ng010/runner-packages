@@ -1,5 +1,10 @@
 name: Deploy Fake
 on:
+    workflow_call:
+        inputs:
+            ambiente:
+                type: string
+                required: true
     repository_dispatch:
         types:
             -   deploy-remoto

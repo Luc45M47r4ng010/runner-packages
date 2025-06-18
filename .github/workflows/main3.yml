@@ -1,0 +1,17 @@
+name: CI/CD Fake
+on:
+    workflow_dispatch:
+jobs:
+    CI:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Build de imagem docker
+                run: echo "Execução"
+            -   name: Execução de tede de software
+                run: echo "Aqui eu executo o teste de software"
+            -   name: Publicando a release
+                run: echo "Publicação da release final"
+    CD:
+        needs: [CI]
+        uses: fsv-aula/repo-reaproveita/.github/workflows/cd.yml@main
+        secrets: inherit
